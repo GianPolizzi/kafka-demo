@@ -1,0 +1,27 @@
+# Maven
+/target/
+pom.xml.tag
+pom.xml.versionsBackup
+pom.xml.releaseBackup
+pom.xml.next
+release.properties
+/release/
+/repo/
+/lib/
+/bin/
+
+# Logs
+*.log
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Specific Spring Boot files
+/producer-service/target/
+/consumer-service/target/
+
+# Docker
+.env
