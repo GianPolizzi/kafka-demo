@@ -12,6 +12,14 @@ public class ProducerController {
     @Autowired
     private KafkaProducerService producerService;
 
+    /**
+     * Il messagio da inviare avrà URL:
+     *
+     * http://localhost:8081/send?message=Messaggio_che_sto_inviando
+     *
+     * @param message
+     * @return
+     */
     @GetMapping("/send")
     public String sendMessage(@RequestParam("message") String message) {
         producerService.sendMessage(message);

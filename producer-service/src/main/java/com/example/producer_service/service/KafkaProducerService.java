@@ -13,7 +13,7 @@ public class KafkaProducerService {
     private static final String TOPIC = "my-topic";
 
     public void sendMessage(String message) {
-        System.out.println("Sending message: " + message + " to topic: " + TOPIC);
+        System.out.println("Sending message: [" + message + "] to topic: " + TOPIC);
         this.kafkaTemplate.send(TOPIC, message);
     }
 }
