@@ -1,19 +1,22 @@
 package com.example.producer_service.service;
 
+import com.example.producer_service.utils.Constants;
+import com.example.shared_module.MessageData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
 
 @Service
 public class KafkaProducerService {
 
     @Autowired
-    private KafkaTemplate<String, String> kafkaTemplate;
+    private KafkaTemplate<String, MessageData> kafkaTemplate;
 
-    private static final String TOPIC = "my-topic";
-
-    public void sendMessage(String message) {
-        System.out.println("Sending message: [" + message + "] to topic: " + TOPIC);
-        this.kafkaTemplate.send(TOPIC, message);
+    public void sendMessage(MessageData message) {
+        message.setTimestamp(LocalDateTime.now());
+        System.out.println("Sending message: [" + message + "] to topic: " + Constants.TOPIC);
+        this.kafkaTemplate.send(Constants.TOPIC, message);
     }
 }

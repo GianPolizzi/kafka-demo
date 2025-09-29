@@ -22,6 +22,7 @@ release.properties
 # Specific Spring Boot files
 /producer-service/target/
 /consumer-service/target/
+/shared-module/target
 
 # Docker
 .env
