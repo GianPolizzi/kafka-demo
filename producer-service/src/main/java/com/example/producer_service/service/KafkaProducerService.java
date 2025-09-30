@@ -1,6 +1,6 @@
 package com.example.producer_service.service;
 
-import com.example.producer_service.utils.Constants;
+import com.example.shared_module.Constants;
 import com.example.shared_module.MessageData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;

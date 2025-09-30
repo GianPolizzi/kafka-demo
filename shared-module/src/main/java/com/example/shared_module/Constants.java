@@ -1,4 +1,4 @@
-package com.example.consumer_service.utils;
+package com.example.shared_module;
 
 public class Constants {
 

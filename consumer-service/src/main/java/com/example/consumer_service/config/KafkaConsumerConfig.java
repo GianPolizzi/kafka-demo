@@ -1,6 +1,6 @@
 package com.example.consumer_service.config;
 
-import com.example.consumer_service.utils.Constants;
+import com.example.shared_module.Constants;
 import org.apache.kafka.common.TopicPartition;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
