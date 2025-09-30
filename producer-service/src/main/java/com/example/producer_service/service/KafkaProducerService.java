@@ -24,8 +24,8 @@ public class KafkaProducerService {
         //message.setId(message.getSender());
         message.setId(uniqueId);
         message.setTimestamp(LocalDateTime.now());
-        String kafkaKeyMessage = message.getId();
-        System.out.println("Sending message: [" + message.getMessage() + "] with key: [" + message.getId() + "]  to topic: " + Constants.TOPIC);
+        String kafkaKeyMessage = message.getSender();
+        System.out.println("Sending message: [" + message.getMessage() + "] with key: [" + kafkaKeyMessage + "]  to topic: " + Constants.TOPIC);
         this.kafkaTemplate.send(Constants.TOPIC, kafkaKeyMessage, message);
     }
 }
