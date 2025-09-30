@@ -25,6 +25,7 @@ public class KafkaConsumerListener {
         System.out.println("------------------------------------------");
         System.out.println("CONSUMER RECEIVED NEW MESSAGE (FORMATTED):");
         System.out.println("------------------------------------------");
+        System.out.println("ID:   " + message.getId());
         System.out.println("Content:   " + message.getMessage());
         System.out.println("Sender:    " + message.getSender());
         System.out.println("Timestamp: " + message.getTimestamp());
