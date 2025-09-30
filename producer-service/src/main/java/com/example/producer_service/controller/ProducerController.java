@@ -14,11 +14,8 @@ public class ProducerController {
 
     /**
      * Il messagio da inviare avrà URL:
+     * <a href="http://localhost:8081/send?message=Messaggio_che_sto_inviando">...</a>
      *
-     * http://localhost:8081/send?message=Messaggio_che_sto_inviando
-     *
-     * @param messageRequest
-     * @return
      */
     @PostMapping("/send")
     public String sendMessage(@RequestBody MessageData messageRequest) {
