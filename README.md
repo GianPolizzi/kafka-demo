@@ -1,9 +1,10 @@
 # Kafka Producer/Consumer Demo
 
 This project is a simple demonstration of an asynchronous communication system using Apache Kafka. It contains the following micro-services and library:
-- producer-service: A RESTful API that sends messages to a Kafka topic.
-- consumer-service: A Kafka listener that receives and processes messages from the same topic.
-- shared-module: Library containing the Bean class for standard message
+- **producer-service**: A RESTful API that sends messages to a Kafka *topic*.
+- **consumer-service**: A Kafka listener that receives and processes messages from the same *topic*.
+- **counter-service**: A Kafka Stream service that receives and count message from the same *topic* and send the modified message on a new *topic* (useful to analyze message)
+- **shared-module**: Library containing the Bean class for standard message
 
 ## Getting started 🚀
 
